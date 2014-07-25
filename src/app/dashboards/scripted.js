@@ -28,7 +28,8 @@ timspan = '1d';
 // Intialize a skeleton with nothing but a rows array and service object
 dashboard = {
   rows : [],
-  services : {}
+  services : {},
+  nav: []
 };
 
 // Set a title
@@ -75,6 +76,16 @@ for (var i = 0; i < rows; i++) {
     ]
   });
 }
+
+// add menu links panel
+
+dashboard.nav.push({
+  type: 'menulinks'
+});
+
+dashboard.nav.push({
+  type: 'timepicker'
+});
 
 
 return dashboard;

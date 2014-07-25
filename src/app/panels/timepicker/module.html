@@ -11,8 +11,16 @@
   </style>
   <!--  This is a complete hack. The form actually exists in the modal, but due to transclusion
         $scope.input isn't available on the controller unless the form element is in this file -->
-  <form name="input" style="margin:3px 0 0 0">
-    <ul class="nav nav-pills timepicker-dropdown">
+
+  <form name="input" style="margin: 0">
+    <ul class="nav timepicker-dropdown grafana-menu-inner">
+
+      <li class="grafana-menu-zoom-out">
+				<a class='small' ng-click='zoom(2)'>
+					Zoom Out
+				</a>
+			</li>
+
       <li class="dropdown">
 
         <a class="dropdown-toggle timepicker-dropdown" data-toggle="dropdown" href="" bs-tooltip="time.from.date ? (time.from.date | date:'yyyy-MM-dd HH:mm:ss.sss') + ' <br>to<br>' +(time.to.date | date:'yyyy-MM-dd HH:mm:ss.sss') : 'Click to set a time filter'" data-placement="bottom" ng-click="dismiss();">
