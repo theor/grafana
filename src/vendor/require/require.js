@@ -1603,6 +1603,7 @@ var requirejs, require, define;
             //Delegates to req.load. Broken out as a separate function to
             //allow overriding in the optimizer.
             load: function(id, url) {
+                console.log("loading " + id + ' , ' + url);
                 req.load(context, id, url);
             },
 

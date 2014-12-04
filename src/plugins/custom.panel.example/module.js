@@ -3,8 +3,10 @@ define([
   'app',
   'lodash',
   'require',
+  'components/panelmeta',
+
 ],
-function (angular, app, _) {
+function (angular, app, _, require, PanelMeta) {
   'use strict';
 
   var module = angular.module('grafana.panels.custom', []);
@@ -12,9 +14,9 @@ function (angular, app, _) {
 
   module.controller('CustomPanelCtrl', function($scope, panelSrv) {
 
-    $scope.panelMeta = {
+    $scope.panelMeta = new PanelMeta({
       description : "Example plugin panel",
-    };
+    });
 
     // set and populate defaults
     var _d = {
